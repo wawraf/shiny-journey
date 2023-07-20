@@ -1,7 +1,60 @@
-<!DOCTYPE html>
-<head>
-    <title>Hi</title>
-</head>
-<body>
-    <h1>Hello, world!</h1>
-</body>
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1 class="text-center">Welcome to my portfolio</h1>
+        <p class="text-center">Here are some projects grouped within drop-down menus:</p>
+
+        <div class="accordion" id="externalLinksAccordion">
+
+          <!-- First drop-down menu -->
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Microservices
+                </button>
+              </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+              data-parent="#externalLinksAccordion">
+              <div class="card-body">
+                {% comment %} Replace "#" with your actual social media links {% endcomment %}
+                <a href="#" target="_blank">Microservice 1</a><br>
+                <a href="#" target="_blank">Microservice 2</a><br>
+                <a href="#" target="_blank">Microservice 3</a><br>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second drop-down menu -->
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Big Projects
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#externalLinksAccordion">
+              <div class="card-body">
+                {% comment %} Replace "#" with links to your project pages {% endcomment %}
+                <a href="#" target="_blank">Project 1</a><br>
+                <a href="#" target="_blank">Project 2</a><br>
+                <a href="#" target="_blank">Project 3</a><br>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more drop-down menus as needed -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
