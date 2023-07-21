@@ -11,7 +11,7 @@
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 40px 10%;
-  background-color: #c0dfd9;
+  background-color: #c0dfd9 !important;
   color: #3b3a36;
 }
 
