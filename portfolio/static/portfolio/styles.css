@@ -11,8 +11,8 @@
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 40px 10%;
-  background-color: #c0dfd9 !important;
-  color: #3b3a36;
+  background-color: #6EA49D;
+  color: #234D5C;
 }
 
 main {
@@ -22,7 +22,7 @@ main {
 h1 {
   font-weight: bold;
   font-size: 3em;
-  color: #fcfcfc;
+  color: #0C2037;
 }
 
 .bold {
@@ -57,10 +57,15 @@ footer {
 }
 
 a {
-  color: #fcfcfc;
+  color: #234D5C;
   text-decoration: none;
 }
 
 a:visited {
-  color: #fcfcfc;
+  color: #234D5C;
  }
+
+a:hover {
+  color: #0C2037;
+  background-color: #6EA49D;
+}

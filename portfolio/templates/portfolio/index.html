@@ -1,56 +1,86 @@
 {% extends 'layout.html' %}
 {% load static %}
 
+{% block title %}Portfolio{% endblock %}
+
 {% block content %}
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-8 offset-md-2">
-        <h1 class="text-center">Welcome to my portfolio built in Django/h1>
+        <h1 class="text-center">Welcome to my portfolio<br>built in Django</h1>
         <p class="text-center">Here are some projects grouped within drop-down menus:</p>
 
         <div class="accordion" id="externalLinksAccordion">
-
-          <!-- First drop-down menu -->
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                  data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  Microservices
-                </button>
-              </h2>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Microservices
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#externalLinksAccordion">
+              <div class="accordion-body">
+                <div class="card-body">
+                  <a href="{% url 'timestamp' %}" target="">Timestamp</a><br>
+                  <a href="#" target="_blank">Microservice 2</a><br>
+                  <a href="#" target="_blank">Microservice 3</a><br>
+                </div>
+              </div>
             </div>
-
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-              data-parent="#externalLinksAccordion">
-              <div class="card-body">
-                {% comment %} Replace "#" with your actual social media links {% endcomment %}
-                <a href="#" target="_blank">Microservice 1</a><br>
-                <a href="#" target="_blank">Microservice 2</a><br>
-                <a href="#" target="_blank">Microservice 3</a><br>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button shadow-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Other projects
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#externalLinksAccordion">
+              <div class="accordion-body">
+                  <a href="{% url 'timestamp' %}" target="">Project 1</a><br>
+                  <a href="#" target="_blank">Project 2</a><br>
+                  <a href="#" target="_blank">Project 3</a><br>
               </div>
             </div>
           </div>
 
-          <!-- Second drop-down menu -->
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h2 class="mb-0">
-                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                  data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Big Projects
-                </button>
-              </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#externalLinksAccordion">
-              <div class="card-body">
-                {% comment %} Replace "#" with links to your project pages {% endcomment %}
-                <a href="#" target="_blank">Project 1</a><br>
-                <a href="#" target="_blank">Project 2</a><br>
-                <a href="#" target="_blank">Project 3</a><br>
-              </div>
-            </div>
-          </div>
+<!--        <div class="accordion" id="externalLinksAccordion">-->
+
+<!--          &lt;!&ndash; First drop-down menu &ndash;&gt;-->
+<!--          <div class="card">-->
+<!--            <div class="card-header" id="headingOne">-->
+<!--              <button class="btn btn-link btn-block text-left collapsed btn-light" type="button" data-bs-toggle="collapse"-->
+<!--                  data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">-->
+<!--                  Microservices-->
+<!--              </button>-->
+<!--            </div>-->
+
+<!--            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"-->
+<!--              data-bs-parent="#externalLinksAccordion">-->
+<!--              <div class="card-body">-->
+<!--                {% comment %} Replace "#" with your actual social media links {% endcomment %}-->
+<!--                <a href="{% url 'timestamp' %}" target="">Timestamp</a><br>-->
+<!--                <a href="#" target="_blank">Microservice 2</a><br>-->
+<!--                <a href="#" target="_blank">Microservice 3</a><br>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Second drop-down menu &ndash;&gt;-->
+<!--          <div class="card">-->
+<!--            <div class="card-header" id="headingTwo">-->
+<!--              <button class="btn btn-link btn-block text-left collapsed btn-light" type="button" data-bs-toggle="collapse"-->
+<!--                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">-->
+<!--                  Big Projects-->
+<!--              </button>-->
+<!--            </div>-->
+<!--            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#externalLinksAccordion">-->
+<!--              <div class="card-body">-->
+<!--                {% comment %} Replace "#" with links to your project pages {% endcomment %}-->
+<!--                <a href="#" target="_blank">Project 1</a><br>-->
+<!--                <a href="#" target="_blank">Project 2</a><br>-->
+<!--                <a href="#" target="_blank">Project 3</a><br>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
 
           <!-- Add more drop-down menus as needed -->
 
