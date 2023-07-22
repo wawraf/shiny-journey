@@ -1,0 +1,23 @@
+{% extends './microservice_layout.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block header %}{{ title }}{% endblock %}
+
+{% block  main %}
+  <p class="bold">How to use:</p>
+  <ol>
+    <li>I can submit a FormData object that includes a file upload.</li>
+    <li>When I submit something, I will receive the file size in bytes within the JSON response.</li>
+  </ol>
+  <p class="bold">Output:</p>
+  <ol class = "example">
+    <li>{"size":82}</li>
+  </ol>
+  <p>Here you can upload your own file:</p>
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="myfile">
+    <button type="submit" value="upload">Upload</button>
+  </form>
+{% endblock %}

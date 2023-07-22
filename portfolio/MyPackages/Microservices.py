@@ -35,3 +35,11 @@ def is_natural(date):
         return True
     except:
         return False
+
+
+def parse_header(request):
+    return {
+        "ip"        : request.headers.get("X-Forwarded-For"),
+        "language"  : request.headers.get('Accept-Language'),
+        "software"  : request.headers.get('User-Agent')
+    }

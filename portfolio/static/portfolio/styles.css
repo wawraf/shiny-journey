@@ -69,3 +69,7 @@ a:hover {
   color: #0C2037;
   background-color: #6EA49D;
 }
+
+.accordion-body {
+    background-color: #6EA49D80;
+}

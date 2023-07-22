@@ -1,0 +1,21 @@
+{% extends './microservice_layout.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block header %}{{ title }}{% endblock %}
+
+{% block  main %}
+  <p class="bold">How to use:</p>
+  <ol>
+    <li>Visit <span class = "bold">/whoami</span> subsite to get your request header back as json.</li>
+  </ol>
+  <p class="bold">Examples:</p>
+  <ol class = "example">
+    <li><a href="{{ url }}whoami" target="_blank">{{ url }}<span class = "bold">whoami</span></a></li>
+  </ol>
+  <p class="bold">Output:</p>
+  <ol class = "example">
+    <li>{"ip": "214.145.33.111", "language": "pl-PL,pl", "software": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"}</li>
+  </ol>
+{% endblock %}
