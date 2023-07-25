@@ -1,4 +1,5 @@
 **/__pycache__/
-portfolio/migrations/
+**/migrations/
+static/
 .idea/
 db.sqlite3

@@ -82,7 +82,7 @@ DATABASES = {
     },
     'production': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'wawraf@default',
+        'NAME': 'wawraf$default',
         'USER': 'wawraf',
         'PASSWORD': '55888GUKv*eC',
         'HOST': 'wawraf.mysql.pythonanywhere-services.com',
