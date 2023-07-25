@@ -117,6 +117,7 @@ def compose(request):
     return JsonResponse({"message": "Email sent successfully."}, status=201)
 
 
+@csrf_exempt
 @login_required
 def email(request, email_id):
     # Query for requested email
