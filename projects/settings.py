@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['wawraf.pythonanywhere.com', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'mail',
     'portfolio',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -75,12 +76,23 @@ WSGI_APPLICATION = 'projects.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'development': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    'production': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'wawraf@default',
+        'USER': 'wawraf',
+        'PASSWORD': '55888GUKv*eC',
+        'HOST': 'wawraf.mysql.pythonanywhere-services.com',
     }
 }
 
+if DEBUG:
+    DATABASES['default'] = DATABASES['development']
+else:
+    DATABASES['default'] = DATABASES['production']
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -131,3 +143,5 @@ MEDIA_ROOT = '/home/wawraf/projects/media'
 MEDIA_URL = '/media/'
 STATIC_ROOT = '/home/wawraf/projects/static'
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = 'mail.User'
