@@ -1,0 +1,27 @@
+{% extends './layout.html' %}
+{% load static %}
+
+{% block  main %}
+  <p class="bold">How to use:</p>
+  <ol>
+    <li>Choose an image in loseless format.</li>
+    <li>Provide a message, upload the file and wait for encoded file (or decoded message in the message field).</li>
+  </ol>
+
+  <p>Here you can upload your own file:</p>
+  <form action="{% url 'steganography:index' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {% for field in form %}
+        <div class="form-group">
+            <label class="control-label" for="id_{{ field.name }}">{{ field.label }}</label>
+            {{ field }}
+            {% if field.errors %}
+            <small class="form-text text-muted">
+                {% for error in field.errors %}{{ error }}{% endfor %}
+            </small>
+            {% endif %}
+        </div>
+      {% endfor %}
+      <input type="submit" />
+  </form>
+{% endblock %}
