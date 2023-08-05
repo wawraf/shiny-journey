@@ -1,8 +1,4 @@
 **/__pycache__/
 **/migrations/
-<<<<<<< HEAD
-static/
-=======
->>>>>>> 1115e85af1ade7b34fa7cf04ea2cf60172e35bc9
 .idea/
 db.sqlite3
